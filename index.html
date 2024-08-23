@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,18 +15,22 @@
             margin: 0;
             background-color: #f0f0f0;
         }
+
         h1 {
             color: #333;
         }
     </style>
 </head>
+
 <body>
     <h1>Hello, World!</h1>
+    <p id="message-holder">The message will go here</p>
 
     <script>
-        window.addEventListener('message', function(event) {
-            alert('Received message: ' + event.data);
+        window.addEventListener('message', function (event) {
+            document.getElementById('message-holder').textContent = 'Received message: ' + event.data;
         });
     </script>
 </body>
+
 </html>
